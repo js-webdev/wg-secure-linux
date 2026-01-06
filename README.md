@@ -2,19 +2,19 @@
 
 ## Ziel
 
-Dieses Projekt stellt eine **gehärtete WireGuard-Anbindung mit vorgeschalteter 2-Faktor-Authentifizierung (Push)** für **LibreELEC auf Raspberry Pi** bereit.
+This Project provides a **hardened WireGuard connection with preemptive 2-factor authentication (Push)** for **LibreELEC on Raspberry Pi** or other linux systems.
 
-Die VPN-Verbindung wird **nur aufgebaut**, wenn:
+The VPN connection is **only established** if:
 
-- das Gerät **nicht bereits im Zielnetz erreichbar** ist
-- die **2FA über privacyIDEA erfolgreich bestätigt** wurde
+- the device is **not already reachable in the target network**
+- the **2FA via privacyIDEA is successfully confirmed**
 
-🔒 **Private Keys werden niemals persistent gespeichert.**
-🔒 **Kein `wg-quick`, kein systemd, kein NetworkManager.**
+🔒 **Private Keys are never persistently stored.**
+🔒 **No `wg-quick`, no systemd, no NetworkManager.**
 
 ---
 
-## Architekturüberblick
+## Architecture Overview
 
 ```text
 LibreELEC Boot
