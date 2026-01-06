@@ -14,8 +14,8 @@ import os
 import asyncio
 
 # ----------------- Konfiguration -----------------
-HOME_GATEWAY = "192.168.188.1"
-SERVER_IP = "192.168.188.8"
+HOME_GATEWAY = "192.168.0.1"
+SERVER_IP = "192.168.0.2"
 
 PRIVACYIDEA_HOST = "host.example.com"
 PRIVACYIDEA_CHECK_URL = f"https://{PRIVACYIDEA_HOST}/validate/check"
@@ -26,7 +26,7 @@ PRIVACYIDEA_REALM = "example.com"
 
 WG_INTERFACE = "wg0"
 WG_CONF_PATH = "/storage/.config/wireguard/callhome.conf"
-WG_IP_ADDRESS = "192.168.0.2/32"
+WG_IP_ADDRESS = "192.168.0.101/32"
 WG_NETWORK = "192.168.0.0/24"
 
 KS_HOST = "ks.example.com"
