@@ -19,28 +19,28 @@ Die VPN-Verbindung wird **nur aufgebaut**, wenn:
 ```text
 LibreELEC Boot
    │
-   ├─ Prüfe: Zielnetz erreichbar?
-   │      └─ Ja → kein VPN
-   │      └─ Nein → weiter
+   ├─ Check: Target network reachable?
+   │      └─ Yes → no VPN
+   │      └─ No → continue
    │
-   ├─ Warte auf DNS / Netzwerk
+   ├─ Wait for DNS / Network
    │
    ├─ privacyIDEA Push-2FA
-   │      └─ Erfolgreich → Key freigeben
-   │      └─ Fehlgeschlagen → Abbruch
+   │      └─ Success → Release key
+   │      └─ Failure → Abort
    │
-   |- Verbindung mit Key Store API - Auth mit HMAC Signatur
-   |      └─ Key Store überprüft privacyIDEA ob Key freigegeben
-   |         └─ Freigegeben → Key ausgeben
-   |         └─ Nicht freigegeben → Abbruch
+   |- Connection with Key Store API - Auth with HMAC Signature
+   |      └─ Key Store checks with privacyIDEA if key is released
+   |         └─ Released → Output key
+   |         └─ Not released → Abort
    |
-   ├─ WireGuard Interface wg0
-   │      ├─ Key nur im RAM
-   │      ├─ IP & Routing setzen
-   │      └─ VPN aktiv
+   ├─ WireGuard Interface
+   │      ├─ Key only in RAM
+   │      ├─ Set IP & Routing
+   │      └─ VPN active
    │
    └─ Shutdown:
-          └─ wg0 vollständig entfernen
+          └─ wireguard interface completely removed
 ```
 
 ---
