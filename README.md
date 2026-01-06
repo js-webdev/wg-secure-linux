@@ -45,7 +45,7 @@ LibreELEC Boot
 
 ---
 
-## Voraussetzungen
+## Requirements
 
 ### Hardware
 
